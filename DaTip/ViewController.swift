@@ -77,6 +77,9 @@ class ViewController: UIViewController {
                 self.sumPay.alpha = 1.0
             }, completion: nil)
             
+            //Hide error if user corrects input
+            enterNumber.alpha = 0.0
+            
         } else {
             // Fade in error message
             UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
@@ -85,8 +88,7 @@ class ViewController: UIViewController {
             
             tipAmount.alpha = 0.0
             sumPay.alpha = 0.0
-            //Hide error if user corrects input
-            enterNumber.alpha = 0.0
+            
             
         }
     }
